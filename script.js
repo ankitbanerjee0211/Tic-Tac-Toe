@@ -32,12 +32,13 @@ const checkWin = () => {
         if((boxTexts[e[0]].innerText === boxTexts[e[1]].innerText) && (boxTexts[e[1]].innerText === boxTexts[e[2]].innerText) && (boxTexts[e[0]].innerText !== '')){
             document.querySelector('.info').innerText = boxTexts[e[0]].innerText + " Won";
             gameOverFlag = true;
-            document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "20vw";
             document.querySelector('.line').style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
             if(window.matchMedia("(min-width: 600px)").matches){
                 document.querySelector('.line').style.width = "30vw";
+                document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "20vw";
             } else{
                 document.querySelector('.line').style.width = "60vw";
+                document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "30vw";
             }
         }
     })
