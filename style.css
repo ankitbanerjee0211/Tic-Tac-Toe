@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    background-color: rgb(255, 123, 0);
+    color: black;
+    height: 75px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 0 0 0 2%;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 7vh;
+    flex-wrap: wrap;
+}
+
+.line{
+    background-color: green;
+    top: 5vw;
+    /* width: 30vw; */
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(255, 255, 204);
+}
+
+.gameInfo{
+    padding: 0 3vw;
+}
+.info{
+    font-weight: bold;
+    font-size: 2.75vw;
+}
+#reset{
+    margin: 0.75vw 0;
+    padding: .25vw 1.5vw;
+    font-size: 2vw;
+    border-radius: 7.5%;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(255, 169, 169);
+}
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+
+@media screen and (max-width: 600px){
+    nav{
+        height: 12vh;
+        font-size: 9vw;
+        padding: 0 0 0 5vw;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+
+    .line{
+        background-color: green;
+        /* width: 60vw; */
+        top: 10vw;
+        height: 3px;
+        border-radius: 20px;
+        position: absolute;
+        display: none;
+    }
+
+    .gameInfo{
+        padding: 6vw 2vw;
+        margin: auto;
+        text-align: center;
+    }
+    .gameInfo h1{
+        font-size: 7vw;
+    }
+    .info{
+        font-size: 5.75vw;
+    }
+    #reset{
+        margin: 2.5vw;
+        padding: 1vw 5vw;
+        font-size: 5vw;
+        border-radius: 7.5%;
+    }
+}
