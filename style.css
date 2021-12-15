@@ -81,11 +81,6 @@
 
 
 @media screen and (max-width: 600px){
-    nav{
-        height: 12vh;
-        font-size: 9vw;
-        padding: 0 0 0 5vw;
-    }
     .gameBoxContainer{
         display: grid;
         grid-template-rows: repeat(3, 20vw);

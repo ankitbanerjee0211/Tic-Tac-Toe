@@ -39,10 +39,14 @@ const checkWin = () => {
             document.querySelector('.line').style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
             if(window.matchMedia("(min-width: 600px)").matches){
                 document.querySelector(".line").style.width = "30vw";
-                document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "20vw";
+                if(boxTexts[e[0]].innerText == "X"){
+                    document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "20vw";
+                }
             } else{
                 document.querySelector(".line").style.width = "60vw";
-                document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "30vw";
+                if(boxTexts[e[0]].innerText == "X"){
+                    document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "30vw";
+                }
             }
         } else if(gameOverFlag == false && (boxTexts[0].innerText != '') && (boxTexts[1].innerText != '') && (boxTexts[2].innerText != '') && (boxTexts[3].innerText != '') && (boxTexts[4].innerText != '') && (boxTexts[5].innerText != '') && (boxTexts[6].innerText != '') && (boxTexts[7].innerText != '') && (boxTexts[8].innerText != '')){
             document.querySelector('.info').innerText = "It's a Draw";
