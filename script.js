@@ -40,13 +40,11 @@ const checkWin = () => {
                 document.querySelector(".line").style.width = "60vw";
                 document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "30vw";
             }
-        } else if(gameOverFlag == false){
-            document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-            if((boxTexts[0] != '') && (boxTexts[1] != '') && (boxTexts[2] != '') && (boxTexts[3] != '') && (boxTexts[4] != '') && (boxTexts[5] != '') && (boxTexts[6] != '') && (boxTexts[7] != '') && (boxTexts[8] != '')){
-                document.querySelector('.info').innerText = "It's a Draw";
-            }
         }
-    })
+    });
+    if(gameOverFlag == false && (boxTexts[0].innerText != '') && (boxTexts[1].innerText != '') && (boxTexts[2].innerText != '') && (boxTexts[3].innerText != '') && (boxTexts[4].innerText != '') && (boxTexts[5].innerText != '') && (boxTexts[6].innerText != '') && (boxTexts[7].innerText != '') && (boxTexts[8].innerText !== '')){
+            document.querySelector('.info').innerText = "It's a Draw";
+        }
 }
 
 // Game Logic
@@ -58,6 +56,7 @@ Array.from(boxes).forEach(element => {
             boxText.innerText = turn;
             turn = changeTurn();
             turnAudio.play();
+            document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
             checkWin();
         }
     })
