@@ -40,6 +40,11 @@ const checkWin = () => {
                 document.querySelector(".line").style.width = "60vw";
                 document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "30vw";
             }
+        } else if(gameOverFlag == false){
+            document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+            if((boxTexts[0] != '') && (boxTexts[1] != '') && (boxTexts[2] != '') && (boxTexts[3] != '') && (boxTexts[4] != '') && (boxTexts[5] != '') && (boxTexts[6] != '') && (boxTexts[7] != '') && (boxTexts[8] != '')){
+                document.querySelector('.info').innerText = "It's a Draw";
+            }
         }
     })
 }
@@ -54,9 +59,6 @@ Array.from(boxes).forEach(element => {
             turn = changeTurn();
             turnAudio.play();
             checkWin();
-            if(gameOverFlag == false){
-                document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-            }
         }
     })
 })
