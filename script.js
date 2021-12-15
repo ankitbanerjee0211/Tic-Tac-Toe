@@ -70,6 +70,6 @@ reset.addEventListener('click', () => {
     document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "0";
     turn = "X";
     document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-    document.querySelector('.line').style.display = `none`;
+    document.querySelector('.line').style.width = '0';
     gameOverFlag = false;
 })
