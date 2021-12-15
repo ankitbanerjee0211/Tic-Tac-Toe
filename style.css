@@ -7,25 +7,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-nav{
-    background-color: rgb(255, 123, 0);
-    color: black;
-    height: 75px;
-    font-size: 27px;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    padding: 0 0 0 2%;
-}
-
-nav ul{
-    list-style-type: none;
-}
 
 .gameContainer{
     display: flex;
     justify-content: center;
-    margin-top: 7vh;
+    margin-top: 9vh;
     flex-wrap: wrap;
 }
 
@@ -40,7 +26,7 @@ nav ul{
     transition: width 1s ease-in-out;
 }
 
-.container{
+.gameBoxContainer{
     display: grid;
     grid-template-rows: repeat(3, 10vw);
     grid-template-columns: repeat(3, 10vw);
@@ -100,7 +86,7 @@ nav ul{
         font-size: 9vw;
         padding: 0 0 0 5vw;
     }
-    .container{
+    .gameBoxContainer{
         display: grid;
         grid-template-rows: repeat(3, 20vw);
         grid-template-columns: repeat(3, 20vw);
