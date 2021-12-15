@@ -49,7 +49,7 @@ let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
     let boxText = element.querySelector('.boxText');
     element.addEventListener('click', (e)=>{
-        if(boxText.innerText === ''){
+        if(boxText.innerText === '' && gameOverFlag == false){
             boxText.innerText = turn;
             turn = changeTurn();
             turnAudio.play();
