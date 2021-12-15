@@ -108,12 +108,10 @@ nav ul{
 
     .line{
         background-color: green;
-        /* width: 60vw; */
         top: 10vw;
         height: 3px;
         border-radius: 20px;
         position: absolute;
-        display: none;
     }
 
     .gameInfo{
