@@ -1,7 +1,9 @@
 console.log("Welcome to TicTacToe");
 let bgMusic = new Audio("music.mp3");
-let turnAudio = new Audio("ting.mp3");
+let turnAudio = new Audio("ting.wav");
+let drawAudio = new Audio("ting.mp3");
 let gameOver = new Audio("gameover.mp3");
+let winAudio = new Audio("winAudio.wav");
 let gameOverFlag = false;
 let turn = "X";
 let flag = true;
@@ -40,10 +42,12 @@ const checkWin = () => {
                 document.querySelector(".line").style.width = "60vw";
                 document.querySelector(".imgBox").getElementsByTagName('img')[0].style.width = "30vw";
             }
+            winAudio.play();
         }
     });
     if(gameOverFlag == false && (boxTexts[0].innerText != '') && (boxTexts[1].innerText != '') && (boxTexts[2].innerText != '') && (boxTexts[3].innerText != '') && (boxTexts[4].innerText != '') && (boxTexts[5].innerText != '') && (boxTexts[6].innerText != '') && (boxTexts[7].innerText != '') && (boxTexts[8].innerText !== '')){
             document.querySelector('.info').innerText = "It's a Draw";
+            drawAudio.play();
         }
 }
 

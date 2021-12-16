@@ -1,7 +1,9 @@
 console.log("Welcome to TicTacToe");
 let bgMusic = new Audio("music.mp3");
-let turnAudio = new Audio("ting.mp3");
+let turnAudio = new Audio("ting.wav");
 let gameOver = new Audio("gameover.mp3");
+let loseAudio = new Audio("loseAudio.wav");
+let winAudio = new Audio("winAudio.wav");
 let gameOverFlag = false;
 let turn = "X";
 let flag = true;
@@ -32,8 +34,10 @@ const checkWin = () => {
         if((boxTexts[e[0]].innerText === boxTexts[e[1]].innerText) && (boxTexts[e[1]].innerText === boxTexts[e[2]].innerText) && (boxTexts[e[0]].innerText !== '')){
             if(boxTexts[e[0]].innerText == "X"){
                 document.querySelector('.info').innerText = "You Won";
+                winAudio.play();
             } else{
                 document.querySelector('.info').innerText = "You Lost";
+                loseAudio.play();
             }
             gameOverFlag = true;
             document.querySelector('.line').style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
