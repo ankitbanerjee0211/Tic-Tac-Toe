@@ -1,9 +1,9 @@
 console.log("Welcome to TicTacToe");
-let bgMusic = new Audio("music.mp3");
-let turnAudio = new Audio("ting.wav");
-let gameOver = new Audio("gameover.mp3");
-let loseAudio = new Audio("loseAudio.wav");
-let winAudio = new Audio("winAudio.wav");
+let bgMusic = new Audio("./assets/audios/music.mp3");
+let turnAudio = new Audio("./assets/audios/ting.wav");
+let gameOver = new Audio("./assets/audios/gameover.mp3");
+let loseAudio = new Audio("./assets/audios/loseAudio.wav");
+let winAudio = new Audio("./assets/audios/winAudio.wav");
 let gameOverFlag = false;
 let turn = "X";
 let flag = true;
